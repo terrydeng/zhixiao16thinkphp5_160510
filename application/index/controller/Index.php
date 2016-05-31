@@ -6,7 +6,7 @@ class Index extends Controller //class Index
 {
 	public function set1weizhi()
 	{
-		$BuChang=60;//100;
+		$BuChang=1600;//800;//400;//200;//100;//60;//60;//100;
 		$LWZ=100;
 		$da11=Db::table('zx_users')->select();
 		$ii=0;
@@ -21,7 +21,7 @@ class Index extends Controller //class Index
 							//	//$tempi=(int)$da1a11['x0x1'];
 							//	print_r($tempi);
 								echo $tempi['x0x1'];
-								$temp2i=$tempi['x0x1'] - ($BuChang/$ii);
+								$temp2i=$tempi['x0x1'] - ($BuChang/(8*$ii*$ii) );
 								echo $temp2i;
 								Db::table('zx_users')
 								-> where('uid',$da1a11['leftchildid'])
@@ -31,7 +31,7 @@ class Index extends Controller //class Index
 					if(0<$da1a11['rightchildid']) {
 							//	$tempi=$da1a11['x0x1'];
 								echo $tempi['x0x1'];
-								$temp2i=$tempi['x0x1'] + ($BuChang/$ii);
+								$temp2i=$tempi['x0x1'] + ($BuChang/(8*$ii *$ii) );
 								echo $temp2i;
 								Db::table('zx_users')
 								-> where('uid',$da1a11['rightchildid'])
@@ -49,31 +49,55 @@ class Index extends Controller //class Index
 	public function index()
 	{
 		echo "h23";
-			global $ob;
+			//global $ob;
 			for($i=0;$i<=100;$i++) { //100;$i++) {
-				for($j=0;$j<100;$j++) { //200;$j++) {					
-					$str1="&nbsp;|";					
+				
+				/*for($j=0;$j<200;$j++) { //200;$j++) {					
+					$str1="|";					
 					$ob[$i][$j]=$str1;//=$str1;
-				}
-			}//for($i=0;$i<100;$i++
+				}*/
+				//echo "<br />";
+				//for($i=0;$i<200;++$i) { echo"|";}
+//				$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+				$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+				//300个｜//199个 ||||||||||   ||||||||||
+				$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+
+				}//for($i=0;$i<100;$i++
 			
+
 		$dat1t=Db::table('zx_users')->select();
+		
+		
+		function substr2replace( $ob1, $da1, $lwz, $len)
+		{
+			$tempstr=substr( $ob1, 0, $lwz);
+			$tempstr=$tempstr.$da1;
+			$temp2str=substr($ob1, $lwz+$len);
+			$tempstr=$tempstr.$temp2str;
+			return( $tempstr);
+		}//function( $ob1, $da1, $lwz, $len
 		
 		for($ii=0;$ii<7;++$ii) {
 			foreach( $dat1t as $da11) {
 				if($ii=$da11['y1y']) {
-					$ob[2*$ii][$da11['x0x1']]=$da11['sysname'];
+			//		$ob[2*$ii-1][$da11['x0x1']]=$da11['fatherid'];
+			//		substr_replace($ob[2*$ii-1] , $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) );
+					$ob[2*$ii-0]=substr2replace($ob[2*$ii -0 ], $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) ); 
+			//		$ob[2*$ii-0]=substr2replace($ob[2*$ii -0 ], $da11['uid'], $da11['x0x1'] ,strlen($da11['uid']) ); 
+					$ob[2*$ii+1]=substr2replace($ob[2*$ii+1  ], $da11['sysname'], $da11['x0x1'] ,strlen($da11['sysname']) ); 
+			//		$ob[2*$ii][$da11['x0x1']]=$da11['sysname'];
 				}
 			}//foreach($dat1t as $da11)
 		}//for($ii=0;$ii<7;++$ii
 			
 			
 			foreach($ob as $o1) {
-				foreach($o1 as $o11) {
-					echo $o11;
-				}
+				//foreach($o1 as $o11) {
+					echo $o1;
+				//}
 				echo "<br />";
-			}
+			}//foreach($ob as $o1
 			
 	}//public function index(
 	
