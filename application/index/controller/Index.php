@@ -83,9 +83,9 @@ class Index extends Controller //class Index
 				if($ii=$da11['y1y']) {
 			//		$ob[2*$ii-1][$da11['x0x1']]=$da11['fatherid'];
 			//		substr_replace($ob[2*$ii-1] , $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) );
-					$ob[2*$ii-0]=substr2replace($ob[2*$ii -0 ], $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) ); 
-			//		$ob[2*$ii-0]=substr2replace($ob[2*$ii -0 ], $da11['uid'], $da11['x0x1'] ,strlen($da11['uid']) ); 
-					$ob[2*$ii+1]=substr2replace($ob[2*$ii+1  ], $da11['sysname'], $da11['x0x1'] ,strlen($da11['sysname']) ); 
+					$ob[2*$ii-1]=substr2replace($ob[2*$ii -1 ], $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) ); 
+					$ob[2*$ii-0]=substr2replace($ob[2*$ii -0 ], $da11['uid'], $da11['x0x1'] ,strlen($da11['uid']) ); 
+			//		$ob[2*$ii+1]=substr2replace($ob[2*$ii+1  ], $da11['sysname'], $da11['x0x1'] ,strlen($da11['sysname']) ); 
 			//		$ob[2*$ii][$da11['x0x1']]=$da11['sysname'];
 				}
 			}//foreach($dat1t as $da11)
