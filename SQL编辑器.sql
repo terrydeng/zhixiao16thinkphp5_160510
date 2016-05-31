@@ -1,3 +1,2 @@
-﻿use zhx160501;
-update zx_users set leftchildid=-1;
-update zx_users set rightchildid=-2;
+﻿use zhx160511;
+update zx_users set x0x1=0

@@ -4,6 +4,146 @@ use think\Controller;
 use think\Db;
 class Index extends Controller //class Index
 {
+	public function set1weizhi()
+	{
+		$BuChang=60;//100;
+		$LWZ=100;
+		$da11=Db::table('zx_users')->select();
+		$ii=0;
+		
+		$max1num=7;
+		for($ii=1;$ii<$max1num;$ii++) {
+			foreach($da11 as $da1a11) {
+				if($ii==$da1a11['y1y']) {
+					$tempi=Db::table('zx_users')->where('uid',$da1a11['uid']) -> find('x0x1');
+					if(0<$da1a11['leftchildid']) {
+								$tempi=Db::table('zx_users')->where('uid',$da1a11['uid']) -> find('x0x1');
+							//	//$tempi=(int)$da1a11['x0x1'];
+							//	print_r($tempi);
+								echo $tempi['x0x1'];
+								$temp2i=$tempi['x0x1'] - ($BuChang/$ii);
+								echo $temp2i;
+								Db::table('zx_users')
+								-> where('uid',$da1a11['leftchildid'])
+								-> update([ 'x0x1'=> $temp2i ] ); 
+							}
+							
+					if(0<$da1a11['rightchildid']) {
+							//	$tempi=$da1a11['x0x1'];
+								echo $tempi['x0x1'];
+								$temp2i=$tempi['x0x1'] + ($BuChang/$ii);
+								echo $temp2i;
+								Db::table('zx_users')
+								-> where('uid',$da1a11['rightchildid'])
+								-> update([ 'x0x1'=> $temp2i ] ); 
+							}
+	//				if(0<$da1a11['rightchildid']) { Db::table('zx_users') -> where('uid',$da1a11['rightchildid']) -> update([ 'x0x1'=>( (int)$da1a11['x0x1']+($BuChang/$ii)) ] ); }
+																										
+				}//if($ii==$da1a11['y1y']
+			}
+			//必须写进数据库; 不然下一层 会出错！
+			
+		}//for($ii=0;$ii<
+	}
+	
+	public function index()
+	{
+		echo "h23";
+			global $ob;
+			for($i=0;$i<=100;$i++) { //100;$i++) {
+				for($j=0;$j<100;$j++) { //200;$j++) {					
+					$str1="&nbsp;|";					
+					$ob[$i][$j]=$str1;//=$str1;
+				}
+			}//for($i=0;$i<100;$i++
+			
+		$dat1t=Db::table('zx_users')->select();
+		
+		for($ii=0;$ii<7;++$ii) {
+			foreach( $dat1t as $da11) {
+				if($ii=$da11['y1y']) {
+					$ob[2*$ii][$da11['x0x1']]=$da11['sysname'];
+				}
+			}//foreach($dat1t as $da11)
+		}//for($ii=0;$ii<7;++$ii
+			
+			
+			foreach($ob as $o1) {
+				foreach($o1 as $o11) {
+					echo $o11;
+				}
+				echo "<br />";
+			}
+			
+	}//public function index(
+	
+	public function inde1bak2x()
+	{
+		global $LWZ;
+		$LWZ=50;//100;
+		global $ob;
+			for($i=0;$i<=100;$i++) { //100;$i++) {
+				for($j=0;$j<100;$j++) { //200;$j++) {					
+					$str1="&nbsp;|";					
+					$ob[$i][$j]=$str1;//=$str1;
+				}
+			}//for($i=0;$i<100;$i++
+		
+		$dat1=Db::table('zx_users') ->select();
+		
+		$ii=0;
+		do { //11
+			foreach( $dat1 as $dat1a1) {
+			//	echo $dat1a1['sysname'];
+				echo $dat1a1['fatherid'];
+				if(-1==$dat1a1['fatherid']) {
+					$ob[1][$LWZ]=$dat1a1['sysname'];
+					$ob[2][$LWZ]=$dat1a1['fatherid'];
+					}
+				
+			}//foreach( $dat1 as $dat1a1
+		
+
+			
+			//
+			
+			$ii++;
+		}while ($ii<6);//do { //11
+		
+//		global $i1i;
+		$i1i=0;
+//		global arr1;
+	//	public 
+		function show2cha1weizhi( $ii,$lwz1,$dat11 , $dat1)
+		{
+			
+			global $ob;
+			$ob[ (2*$ii)][$lwz1] =$dat11['sysname'];
+			Db::table('zx_users')->where('uid',$dat11['uid']) -> update( [ 'x0x1'=>$lwz1 ] );
+			
+			if( 1==$dat11['isleftchild'] ) {
+					foreach( $dat1 as $dat1t1) { if($dat11['uid'] == $dat1t1['fatherid']) show2cha1weizhi ( 1+$ii, ($lwz1-10), $dat1t1 , $dat1 ); }
+					
+				}
+			if (1==$dat11['isrightchild'] ) {
+				
+				foreach( $dat1 as $dat1t1) { if($dat11['uid'] == $dat1t1['fatherid']) show2cha1weizhi ( 1+$ii, ($lwz1+10), $dat1t1 , $dat1 ); }
+			}
+			
+		}//public function show2cha1weizhi(
+		
+		foreach ($dat1 as $dat1t01) {if (-1== $dat1t01['fatherid']) show2cha1weizhi( (1+$i1i), 100, $dat1t01 , $dat1);  }
+		
+		
+		
+		
+		echo "<br />";
+			foreach( $ob as $i1i) {
+				foreach( $i1i as $j2j) { echo $j2j;}
+				echo "<br />";
+			}//foreach($i1 as $ob2j
+			
+	}//public function index(
 	public function inde1childid() {
 		echo "inde2childid";
 		$dat2=Db::table('zx_users')->select();
@@ -28,7 +168,7 @@ class Index extends Controller //class Index
 		}//foreach( $dat2 as $dat2e2
 	}
 	
-    public function index()
+    public function inde0bakx()
     {
 		/*
 
@@ -132,4 +272,6 @@ class Index extends Controller //class Index
 //        return '<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p> ThinkPHP V5<br/><span style="font-size:30px">十年磨一剑 - 为API开发设计的高性能框架</span></p><span style="font-size:22px;">[ V5.0 版本由 <a href="http://www.qiniu.com" target="qiniu">七牛云</a> 独家赞助发布 ]</span></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_bd568ce7058a1091"></thinkad>';
 		return 'hend!';
 	}//public function index(
+	
+	
 }//class Index
