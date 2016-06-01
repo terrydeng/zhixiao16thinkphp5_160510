@@ -1,0 +1,29 @@
+//style.css  
+h2.first{  
+    position:relative;  
+    left:-20px;  
+}  
+  
+h2.second{  
+    position:relative;  
+    left:20px;  
+}  
+  
+#third{  
+    position:relative;  
+    left:50px;  
+    top:0px;  
+    width:200px;  
+    height:100px;  
+    background:green;  
+}  
+  
+  
+#four{  
+    position:relative;  
+    left:80px;  
+    top:0px;  
+    width:100px;  
+    height:150px;  
+    background:blue;  
+} 

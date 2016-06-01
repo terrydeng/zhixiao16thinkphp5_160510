@@ -48,7 +48,7 @@ class Index extends Controller //class Index
 	
 	public function index()
 	{
-		echo "h23"; echo"<br />";
+		echo "h23";
 			//global $ob;
 			for($i=0;$i<=50;++$i) { //100;$i++) { //100;$i++) {
 				
@@ -61,34 +61,22 @@ class Index extends Controller //class Index
 //				$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
 				$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
 				//300个｜//199个 ||||||||||   ||||||||||
-			//	$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
-				
-				//  空格10个  +-+-+-+-+-+-+-+-+-+-
-				//            ++++++++++			 + + + + + + + + + +
-				//	&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+
-				$ob[$i]="&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+&nbsp;+";
-				$ob[$i]="+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+";
-				$ob[$i]="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";//100个
-				$ob[$i]="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";//200个
-				$ob[$i]="|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++";//100个
-				$ob[$i]="|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|";////201个
-				$ob[$i]="|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|+++++++++|";
-				//401个
-				//				$ob[$i]=" + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ";//100对
+				$ob[$i]="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||";
+
 				}//for($i=0;$i<100;$i++
 			
 
 		$dat1t=Db::table('zx_users')->select();
 		
 		
-		function substr2replace( $ob1, $str1da1, $lwz, $len)
+		function substr2replace( $ob1, $da1, $lwz, $len)
 		{
 			$tempstr=substr( $ob1, 0, $lwz);
-			$tempstr=$tempstr.$str1da1;
+			$tempstr=$tempstr.$da1;
 			$temp2str=substr($ob1, $lwz+$len);
 			$tempstr=$tempstr.$temp2str;
 			return( $tempstr);
-		}//function( $ob1, $str1da1, $lwz, $len
+		}//function( $ob1, $da1, $lwz, $len
 		
 		$hangshu_num3=3;
 		for($ii=0;$ii<7;++$ii) {
@@ -97,12 +85,7 @@ class Index extends Controller //class Index
 			//		$ob[2*$ii-1][$da11['x0x1']]=$da11['fatherid'];
 			//		substr_replace($ob[2*$ii-1] , $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) );
 					$ob[$hangshu_num3*$ii-1]=substr2replace($ob[$hangshu_num3*$ii -1 ], $da11['fatherid'], $da11['x0x1'] ,strlen($da11['fatherid']) ); 
-		//			$ob[$hangshu_num3*$ii-0]=substr2replace($ob[$hangshu_num3*$ii -0 ], $da11['sysname'], $da11['x0x1'] ,strlen($da11['sysname']) );
-					$temstrp='<a href=# title="ts:';
-					$temstrp=$temstrp.$da11['sysname'].$da11['uid'];
-					$temstrp=$temstrp.'">';
-					$temstrp=$temstrp.$da11['sysname']."</a>";
-					$ob[$hangshu_num3*$ii-0]=substr2replace($ob[$hangshu_num3*$ii -0 ], $temstrp, $da11['x0x1'] ,strlen($da11['sysname']) );
+					$ob[$hangshu_num3*$ii-0]=substr2replace($ob[$hangshu_num3*$ii -0 ], $da11['sysname'], $da11['x0x1'] ,strlen($da11['sysname']) ); 
 					$ob[$hangshu_num3*$ii+1]=substr2replace($ob[$hangshu_num3*$ii +1 ], $da11['uid'], $da11['x0x1'] ,strlen($da11['uid']) ); 
 			//		$ob[2*$ii+1]=substr2replace($ob[2*$ii+1  ], $da11['sysname'], $da11['x0x1'] ,strlen($da11['sysname']) ); 
 			//		$ob[2*$ii][$da11['x0x1']]=$da11['sysname'];
